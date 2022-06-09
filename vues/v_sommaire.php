@@ -12,6 +12,10 @@
 				  Visiteur :<br>
 				<?php echo $_SESSION['prenom']."  ".$_SESSION['nom']  ?>
 			</li>
+         <li >
+				  Velo :<br>
+				<?php echo $_SESSION['marqueVelo'] ?>
+			</li>
            <li class="smenu">
               <a href="index.php?uc=gererFrais&action=saisirFrais" title="Saisie fiche de frais ">Saisie fiche de frais</a>
            </li>

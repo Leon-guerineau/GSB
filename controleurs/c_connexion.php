@@ -21,7 +21,9 @@ switch($action){
 			$id = $visiteur['id'];
 			$nom =  $visiteur['nom'];
 			$prenom = $visiteur['prenom'];
-			connecter($id,$nom,$prenom);
+			$velo = $pdo->getVelo($visiteur['id']);
+			$marqueVelo = $velo['marque'];
+			connecter($id,$nom,$prenom,$marqueVelo);
 			include("vues/v_sommaire.php");
 		}
 		break;

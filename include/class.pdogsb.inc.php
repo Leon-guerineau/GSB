@@ -60,6 +60,13 @@ class PdoGsb{
 		$ligne = $rs->fetch();
 		return $ligne;
 	}
+	public function getVelo($id){
+		$req = "select Velo.marque as marque from Visiteur,Velo 
+		where Visiteur.id='$id' and Velo.code = Visiteur.codeVelo";
+		$rs = PdoGsb::$monPdo->query($req);
+		$ligne = $rs->fetch();
+		return $ligne;
+	}
 
 /**
  * Retourne sous forme d'un tableau associatif toutes les lignes de frais hors forfait

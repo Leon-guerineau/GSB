@@ -20,10 +20,16 @@ function estConnecte(){
  * @param $nom
  * @param $prenom
  */
-function connecter($id,$nom,$prenom){
+function connecter($id,$nom,$prenom,$marqueVelo){
 	$_SESSION['idVisiteur']= $id; 
 	$_SESSION['nom']= $nom;
 	$_SESSION['prenom']= $prenom;
+	if ($_SESSION['marqueVelo']!=null){
+		$_SESSION['marqueVelo']= $marqueVelo;
+	}
+	else{
+		$_SESSION['marqueVelo'] = 'Aucun vélo';
+	}
 }
 /**
  * Détruit la session active
